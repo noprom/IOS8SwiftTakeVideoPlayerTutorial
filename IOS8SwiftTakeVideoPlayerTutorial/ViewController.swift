@@ -35,6 +35,13 @@ class ViewController: UIViewController ,UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func viewLibrary(sender: AnyObject) {
+        let controller = UIImagePickerController()
+        // Display Photo Library
+        controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        controller.mediaTypes = [kUTTypeMovie as! String]
+        controller.delegate = self
+        
+        presentViewController(controller, animated: true, completion: nil)
     }
     
     
